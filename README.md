@@ -1,3 +1,27 @@
+## project plan
+MVC frameworks
+
+mijn idee is een website maken waar festivals op komen uit een bepaald genre een admin kan die festival toevoegen met een verhaaltje en dan kunnen er users inloggen en daar een reactie opschrijven met hun mening over het festival. zodat bezoekers weer kunnen kijken wat andere van dat festival van vinden voor de volgende keer dat het festival plaatsvindt. of de organisatie kan zien wat bezoekers vinden van het festival.
+
+
+## Project planning
+
+https://docs.google.com/spreadsheets/d/1DuULL_YeYBR8EnrdaG7JeNM4wGSvwQQ1dr_MnmP4T8A/edit?usp=sharing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
