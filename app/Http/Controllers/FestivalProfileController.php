@@ -9,7 +9,7 @@ class FestivalProfileController extends Controller
 {
     public function index($festival)
     {
-        $festival = Festival::find($festival);
+        $festival = Festival::findOrFail($festival);
         return view('home', [
             'festival' => $festival,
         ]);
