@@ -26,3 +26,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'index'])->name('userprofile.show');
+Route::get('/festival/{festival}', [App\Http\Controllers\FestivalProfileController::class, 'index'])->name('festivalprofile.show');
