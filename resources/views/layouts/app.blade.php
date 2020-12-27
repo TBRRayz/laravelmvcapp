@@ -39,6 +39,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <div>
+                            <a href="#">Add Festival</a>
+                        </div>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
