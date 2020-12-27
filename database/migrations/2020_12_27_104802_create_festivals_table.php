@@ -15,6 +15,8 @@ class CreateFestivalsTable extends Migration
     {
         Schema::create('festivals', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('date')->nullable();
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();
