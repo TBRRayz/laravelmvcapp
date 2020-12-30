@@ -19,13 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
 Route::get('/festival/create', [App\Http\Controllers\FestivalController::class, 'create']);
 Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store']);
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
