@@ -14,12 +14,10 @@ class CreateFestivalsTable extends Migration
     public function up()
     {
         Schema::create('festivals', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->increments('id');
             $table->string('date')->nullable();
             $table->string('title')->nullable();
             $table->text('description')->nullable();
-            $table->string('image');
             $table->string('url')->nullable();
             $table->timestamps();
         });
