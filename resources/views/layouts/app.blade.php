@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex" href="/home">
                     <div><img src="/svg/defqon_logo.svg" style="height: 25px; border-right: 1px solid #000000" class="pr-3"></div>
                     <div class="pl-3">laravals</div>
                 </a>
@@ -40,7 +40,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Add Festival</a>
+                                <a class="nav-link" href="/festival/create">Add Festival</a>
                             </li>
                         <!-- Authentication Links -->
                         @guest
