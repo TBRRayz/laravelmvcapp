@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Festival extends Model
 {
+    protected $fillable = [
+        'festivalName',
+        'title',
+        'description',
+        'festivalImage',
+    ];
+
     public function festivalProfile(): HasOne
     {
         return $this->hasOne(FestivalProfile::class);

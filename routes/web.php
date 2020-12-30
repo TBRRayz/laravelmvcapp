@@ -23,6 +23,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
+Route::get('/festival/create', [App\Http\Controllers\FestivalController::class, 'create']);
+Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store']);
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'index'])->name('userprofile.show');
