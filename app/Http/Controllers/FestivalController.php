@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Festival;
 use Illuminate\Http\Request;
 
 class FestivalController extends Controller
@@ -9,6 +10,8 @@ class FestivalController extends Controller
     public function __construct(){
         $this->middleware('auth');
     }
+
+
     public function create()
     {
         return view('festival.create');
@@ -23,8 +26,18 @@ class FestivalController extends Controller
             'festivalImage' => ['required', 'image'],
         ]);
 
-        \App\Models\Festival::create($data);
+        $imagePath = request('festivalImage')->store('uploads', 'public');
 
-        dd(request()->all());
+        //auth()->user()->posts()->create
+
+        \App\Models\Festival::create([
+            'festivalName' => $data['festivalName'],
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'festivalImage' => $imagePath,
+        ]);
+
+        //return redirect('/profile/' . auth()->user()->id);
+        return redirect('/home');
     }
 }
