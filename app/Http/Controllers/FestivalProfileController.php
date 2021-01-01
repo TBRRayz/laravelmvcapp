@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class FestivalProfileController extends Controller
 {
-    public function index($festival)
+    public function show(Festival $festival)
     {
-        $festival = Festival::findOrFail($festival);
-        return view('home', [
+
+        return view('festival.show', [
             'festival' => $festival,
         ]);
     }
