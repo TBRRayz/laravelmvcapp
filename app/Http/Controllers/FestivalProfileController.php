@@ -14,4 +14,27 @@ class FestivalProfileController extends Controller
             'festival' => $festival,
         ]);
     }
+
+    public  function edit(Festival $festival) {
+
+        return view('festival.edit', [
+            'festival' => $festival,
+        ]);
+    }
+
+    public function update(Festival $festival) {
+
+        $data = request()->validate([
+            'festivalName' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'url' => 'url',
+            'festivalImage' => 'image',
+        ]);
+
+        $festival->update($data);
+
+        return redirect("/festival/{$festival->id}");
+
+    }
 }
