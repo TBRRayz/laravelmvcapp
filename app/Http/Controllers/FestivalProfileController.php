@@ -17,6 +17,8 @@ class FestivalProfileController extends Controller
 
     public  function edit(Festival $festival) {
 
+        $this->authorize('update', [Festival::class, $festival]);
+
         return view('festival.edit', [
             'festival' => $festival,
         ]);
@@ -24,6 +26,7 @@ class FestivalProfileController extends Controller
 
     public function update(Festival $festival) {
 
+        $this->authorize('update', [Festival::class, $festival]);
         $data = request()->validate([
             'festivalName' => 'required',
             'title' => 'required',
