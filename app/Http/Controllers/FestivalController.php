@@ -30,7 +30,7 @@ class FestivalController extends Controller
 
         //auth()->user()->posts()->create
 
-        \App\Models\Festival::create([
+        Festival::create([
             'festivalName' => $data['festivalName'],
             'title' => $data['title'],
             'description' => $data['description'],
