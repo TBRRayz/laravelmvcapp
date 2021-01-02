@@ -25,4 +25,6 @@ Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'index'])->name('userprofile.show');
-Route::get('/festival/{festival}', [App\Http\Controllers\FestivalProfileController::class, 'index'])->name('festivalprofile.show');
+Route::get('/festival/{festival}', [App\Http\Controllers\FestivalProfileController::class, 'show'])->name('festivalprofile.show');
+Route::get('/festival/{festival}/edit', [App\Http\Controllers\FestivalProfileController::class, 'edit'])->name('festivalprofile.edit');
+Route::patch('/festival/{festival}', [App\Http\Controllers\FestivalProfileController::class, 'update'])->name('festivalprofile.update');

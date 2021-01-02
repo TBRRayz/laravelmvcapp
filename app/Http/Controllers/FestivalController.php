@@ -14,11 +14,15 @@ class FestivalController extends Controller
 
     public function create()
     {
+        $this->authorize('create', Festival::class);
+
         return view('festival.create');
     }
 
     public function store()
     {
+        $this->authorize('create', Festival::class);
+
         $data = request()->validate([
             'festivalName' => 'required',
             'title' => 'required',
@@ -30,7 +34,7 @@ class FestivalController extends Controller
 
         //auth()->user()->posts()->create
 
-        \App\Models\Festival::create([
+        Festival::create([
             'festivalName' => $data['festivalName'],
             'title' => $data['title'],
             'description' => $data['description'],
