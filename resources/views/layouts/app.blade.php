@@ -42,6 +42,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/festival/create">Add Festival</a>
                             </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/festival/1/edit">Edit Festival</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

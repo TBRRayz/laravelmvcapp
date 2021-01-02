@@ -11,6 +11,7 @@
 
             <div class="pt-4 font-weight-bold">{{ $festival->title }}</div>
             <div class="pt-2">{{ $festival->description }}</div>
+            <div class="pt-2">{{ $festival->url }}</div>
         </div>
     </div>
 </div>
