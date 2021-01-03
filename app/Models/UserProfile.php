@@ -8,6 +8,14 @@ use \Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class UserProfile extends Model
 {
+    protected $fillable = [
+        'title',
+        'description',
+        'url',
+        'password',
+        'image',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
