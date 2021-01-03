@@ -39,6 +39,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Edit Profile</a>
+                        </li>
                         @can('create', \App\Models\Festival::class)
                             <li class="nav-item">
                                 <a class="nav-link" href="/festival/create">Add Festival</a>
