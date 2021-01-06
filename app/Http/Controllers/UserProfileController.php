@@ -40,11 +40,12 @@ class UserProfileController extends Controller
         if (request('Image')) {
             $imagePath = request('Image')->store('userProfile', 'public');
 
+            $imageArray = ['Image' => $imagePath];
         }
 
         $user->userProfile()->update(array_merge(
             $data,
-            ['Image' => $imagePath]
+            $imageArray ?? []
         ));
 
         return redirect("/user/{$user->id}");
