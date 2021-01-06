@@ -9,9 +9,11 @@ class FestivalProfileController extends Controller
 {
     public function show(Festival $festival)
     {
+        $checksIns = (auth()->user()) ? auth()->user()->checkIn->contains($festival->id) : false;
 
         return view('festival.show', [
             'festival' => $festival,
+            'checksIns' => $checksIns,
         ]);
     }
 
