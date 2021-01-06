@@ -16,6 +16,12 @@ class UserProfile extends Model
         'image',
     ];
 
+    public function userProfileImage()
+    {
+        $imagePath = ($this->image) ? '/storage/' . $this->image : '/storage/userProfile/CuPx630800AFBoBxWyFyWHHPAAIBw3T54kH49Ciz.png';
+        return $imagePath;
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
