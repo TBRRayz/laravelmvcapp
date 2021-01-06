@@ -9,7 +9,7 @@
         <div class="col-9 p-5">
             <div><h1>{{ $user->username }}</h1></div>
             <div class="d-flex">
-                <div class="pr-5"><strong>13</strong> Likes</div>
+                <div class="pr-5"><strong>{{ $user->checkIn->count() }}</strong> check-ins</div>
                 <div class="pr-5"><strong>124</strong> comments</div>
             </div>
             <div class="pt-4 font-weight-bold"> {{ $user->userProfile->title }}</div>
