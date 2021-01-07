@@ -11,9 +11,13 @@ class UserProfileController extends Controller
 {
     public function index(User $user)
     {
+        $festivalsId = $user->checkIn()->pluck('festivals.id');
+
+        $festivals = Festival::whereIn('festivals.id', $festivalsId)->latest()->get();
 
         return view('user.user', [
             'user' => $user,
+            'festivals' => $festivals,
         ]);
     }
 
