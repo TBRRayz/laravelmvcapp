@@ -16,25 +16,15 @@
             <div>{{ $user->userProfile->description }}</div>
         </div>
     </div>
+    <div><h1>Check-ins</h1></div>
     <div class="row">
-        <div class="col-2 p-5">
-            <img src="/svg/defqon_logo.svg" class="rounded-circle w-100">
+        @foreach($festivals as $festival)
+        <div class="col-3 p-5">
+            <div><h4>{{ $festival->festivalName }}</h4></div>
+            <div><h6>{{ $festival->title }}</h6></div>
+            <img src="/storage/{{ $festival->festivalImage }}" class="rounded-circle w-100">
         </div>
-        <div class="col-2 p-5">
-            <img src="/svg/decibel.svg" class="rounded-circle w-100">
-        </div>
-        <div class="col-2 p-5">
-            <img src="/svg/qbase.svg" class="rounded-circle w-100">
-        </div>
-        <div class="col-2 p-5">
-            <img src="/svg/decibel.svg" class="rounded-circle w-100">
-        </div>
-        <div class="col-2 p-5">
-            <img src="/svg/qbase.svg" class="rounded-circle w-100">
-        </div>
-        <div class="col-2 p-5">
-            <img src="/svg/defqon_logo.svg" class="rounded-circle w-100">
-        </div>
+        @endforeach
 
     </div>
 </div>
