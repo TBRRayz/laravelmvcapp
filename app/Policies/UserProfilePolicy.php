@@ -41,7 +41,7 @@ class UserProfilePolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->admin();
     }
 
     /**
@@ -65,7 +65,7 @@ class UserProfilePolicy
      */
     public function delete(User $user, UserProfile $userProfile)
     {
-        //
+        return $user->admin();
     }
 
     /**
