@@ -34,7 +34,9 @@ Route::patch('/festival/{festival}', [App\Http\Controllers\FestivalProfileContro
 Route::get('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'index'])->name('userprofile.show');
 Route::get('/user/{user}/edit', [App\Http\Controllers\UserProfileController::class, 'edit'])->name('userprofile.edit');
 Route::patch('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'update'])->name('userprofile.update');
+Route::delete('/user/delete/{user}', [App\Http\Controllers\UserProfileController::class, 'delete'])->name('userprofile.delete');
 
-Route::get('/admin/festival', [App\Http\Controllers\AdminController::class, 'index']);
+Route::get('/admin/festival', [App\Http\Controllers\AdminController::class, 'indexFestival']);
+Route::get('/admin/user', [App\Http\Controllers\AdminController::class, 'indexUser']);
 
 
