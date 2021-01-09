@@ -2,6 +2,26 @@
 
 @section('content')
 <div class="container">
+    <div class="row">
+        <form class="form-inline ml-auto" type="get" action="/search">
+            <input class="form-control" name="searchInput" type="text">
+            <button class="btn btn-primary ml-2" type="submit">Search</button>
+            <select class="form-control ml-2" id="genre" name="genre" required autocomplete="genre">
+                <option value="All">All</option>
+                <option value="Deephouse">Deephouse</option>
+                <option value="Deephouse">Electro</option>
+                <option value="Hardcore">Hardcore</option>
+                <option value="Hardstyle">Hardstyle</option>
+                <option value="House">House</option>
+                <option value="Pop">Pop</option>
+                <option value="R&B">R&B</option>
+                <option value="Rock">Rock</option>
+                <option value="Techno">Techno</option>
+                <option value="Trance">Trance</option>
+                <option value="Urban">Urban</option>
+            </select>
+        </form>
+    </div>
         @foreach($festivals as $festival)
         <div class="row">
             <div class="col-3 p-5">
