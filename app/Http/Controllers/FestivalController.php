@@ -27,6 +27,8 @@ class FestivalController extends Controller
             'festivalName' => 'required',
             'title' => 'required',
             'description' => 'required',
+            'genre' => 'required',
+            'url' => 'url',
             'festivalImage' => ['required', 'image'],
         ]);
 
@@ -38,6 +40,8 @@ class FestivalController extends Controller
             'festivalName' => $data['festivalName'],
             'title' => $data['title'],
             'description' => $data['description'],
+            'genre' => $data['genre'],
+            'url' => $data['url'],
             'festivalImage' => $imagePath,
         ]);
 
