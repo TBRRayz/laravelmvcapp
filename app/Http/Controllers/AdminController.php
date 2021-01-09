@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function indexUser()
     {
-        $this->authorize('delete', UserProfile::class);
+        $this->authorize('create', Festival::class);
         $userData = User::all();
         return view('admin.user', ['users'=>$userData]);
     }

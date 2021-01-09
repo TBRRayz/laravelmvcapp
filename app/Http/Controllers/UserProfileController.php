@@ -58,7 +58,7 @@ class UserProfileController extends Controller
 
     public function delete(User $user)
     {
-        $this->authorize('delete', UserProfile::class);
+        $this->authorize('create', Festival::class);
         UserProfile::where('user_id', $user->id)->delete();
         User::find($user->id)->delete();
         return redirect()->back();
