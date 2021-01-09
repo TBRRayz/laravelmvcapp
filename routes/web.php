@@ -24,6 +24,7 @@ Route::get('/festival/create', [App\Http\Controllers\FestivalController::class, 
 Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'search']);
 
 Route::get('/festival/{festival}', [App\Http\Controllers\FestivalProfileController::class, 'show'])->name('festivalprofile.show');
 Route::get('/festival/{festival}/edit', [App\Http\Controllers\FestivalProfileController::class, 'edit'])->name('festivalprofile.edit');
