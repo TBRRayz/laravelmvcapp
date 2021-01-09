@@ -22,6 +22,7 @@ Route::post('/check/{festival}', [App\Http\Controllers\ChecksController::class, 
 
 Route::get('/festival/create', [App\Http\Controllers\FestivalController::class, 'create']);
 Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store']);
+Route::delete('/festival/delete/{festival}', [App\Http\Controllers\FestivalController::class, 'delete'])->name('festivalprofile.delete');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'search']);

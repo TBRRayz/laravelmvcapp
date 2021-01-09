@@ -48,4 +48,11 @@ class FestivalController extends Controller
         //return redirect('/profile/' . auth()->user()->id);
         return redirect('/home');
     }
+
+    public function delete($festival)
+    {
+
+        Festival::find($festival)->delete();
+        return redirect()->back();
+    }
 }
