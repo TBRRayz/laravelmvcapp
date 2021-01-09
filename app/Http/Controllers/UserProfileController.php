@@ -55,4 +55,12 @@ class UserProfileController extends Controller
         return redirect("/user/{$user->id}");
 
     }
+
+    public function delete(User $user)
+    {
+        $this->authorize('create', Festival::class);
+        UserProfile::where('user_id', $user->id)->delete();
+        User::find($user->id)->delete();
+        return redirect()->back();
+    }
 }
