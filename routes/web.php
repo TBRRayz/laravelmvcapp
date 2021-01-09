@@ -34,4 +34,6 @@ Route::get('/user/{user}', [App\Http\Controllers\UserProfileController::class, '
 Route::get('/user/{user}/edit', [App\Http\Controllers\UserProfileController::class, 'edit'])->name('userprofile.edit');
 Route::patch('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'update'])->name('userprofile.update');
 
+Route::get('/admin/festival', [App\Http\Controllers\AdminController::class, 'index']);
+
 
