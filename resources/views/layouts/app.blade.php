@@ -27,12 +27,6 @@
                     <div><img src="/svg/defqon_logo.svg" style="height: 25px; border-right: 1px solid #000000" class="pr-3"></div>
                     <div class="pl-3">laravals</div>
                 </a>
-                <div>
-                    <form class="form-inline" type="get" action="/search">
-                        <input class="form-control" name="searchInput" type="text">
-                        <button class="btn btn-primary ml-2" type="submit">Search</button>
-                    </form>
-                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

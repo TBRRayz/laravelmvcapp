@@ -22,6 +22,7 @@ Route::post('/check/{festival}', [App\Http\Controllers\ChecksController::class, 
 
 Route::get('/festival/create', [App\Http\Controllers\FestivalController::class, 'create']);
 Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store']);
+Route::delete('/festival/delete/{festival}', [App\Http\Controllers\FestivalController::class, 'delete'])->name('festivalprofile.delete');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'search']);
@@ -33,5 +34,7 @@ Route::patch('/festival/{festival}', [App\Http\Controllers\FestivalProfileContro
 Route::get('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'index'])->name('userprofile.show');
 Route::get('/user/{user}/edit', [App\Http\Controllers\UserProfileController::class, 'edit'])->name('userprofile.edit');
 Route::patch('/user/{user}', [App\Http\Controllers\UserProfileController::class, 'update'])->name('userprofile.update');
+
+Route::get('/admin/festival', [App\Http\Controllers\AdminController::class, 'index']);
 
 
