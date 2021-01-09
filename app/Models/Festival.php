@@ -13,6 +13,7 @@ class Festival extends Model
         'festivalName',
         'title',
         'description',
+        'genre',
         'url',
         'festivalImage',
     ];

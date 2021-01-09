@@ -17,6 +17,7 @@ class CreateFestivalsTable extends Migration
             $table->increments('id');
             $table->string('date')->nullable();
             $table->string('title')->nullable();
+            $table->string('genre')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();
             $table->timestamps();
