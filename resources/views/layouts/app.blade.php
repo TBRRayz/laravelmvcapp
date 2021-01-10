@@ -42,14 +42,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Edit Profile</a>
                         </li>
-                        @can('create', \App\Models\Festival::class)
-                            <li class="nav-item">
-                                <a class="nav-link" href="/festival/create">Add Festival</a>
-                            </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/festival/1/edit">Edit Festival</a>
-                        </li>
-                        @endcan
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

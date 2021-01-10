@@ -65,7 +65,7 @@ class FestivalPolicy
      */
     public function delete(User $user, Festival $festival)
     {
-        //
+        return $user->admin();
     }
 
     /**

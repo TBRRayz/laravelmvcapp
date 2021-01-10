@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
+use App\Models\FestivalComment;
 use App\Models\User;
-use App\Models\UserProfile;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class UserProfilePolicy
+class FestivalCommentPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class UserProfilePolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\UserProfile  $userProfile
+     * @param  \App\Models\FestivalComment  $festivalComment
      * @return mixed
      */
-    public function view(User $user, UserProfile $userProfile)
+    public function view(User $user, FestivalComment $festivalComment)
     {
         //
     }
@@ -41,41 +41,41 @@ class UserProfilePolicy
      */
     public function create(User $user)
     {
-        return $user->admin();
+        //
     }
 
     /**
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\UserProfile  $userProfile
+     * @param  \App\Models\FestivalComment  $festivalComment
      * @return mixed
      */
-    public function update(User $user, UserProfile $userProfile)
+    public function update(User $user, FestivalComment $festivalComment)
     {
-        return $user->id == $userProfile->user_id;
+        //
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\UserProfile  $userProfile
+     * @param  \App\Models\FestivalComment  $festivalComment
      * @return mixed
      */
-    public function delete(User $user, UserProfile $userProfile)
+    public function delete(User $user, FestivalComment $festivalComment)
     {
-        return $user->admin();
+        return $user->id == $festivalComment->user_id;
     }
 
     /**
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\UserProfile  $userProfile
+     * @param  \App\Models\FestivalComment  $festivalComment
      * @return mixed
      */
-    public function restore(User $user, UserProfile $userProfile)
+    public function restore(User $user, FestivalComment $festivalComment)
     {
         //
     }
@@ -84,10 +84,10 @@ class UserProfilePolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\UserProfile  $userProfile
+     * @param  \App\Models\FestivalComment  $festivalComment
      * @return mixed
      */
-    public function forceDelete(User $user, UserProfile $userProfile)
+    public function forceDelete(User $user, FestivalComment $festivalComment)
     {
         //
     }

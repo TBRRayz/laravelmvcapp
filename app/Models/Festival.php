@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Festival extends Model
 {
@@ -13,6 +14,7 @@ class Festival extends Model
         'festivalName',
         'title',
         'description',
+        'genre',
         'url',
         'festivalImage',
     ];
@@ -25,5 +27,10 @@ class Festival extends Model
     public function checkIns(): BelongsToMany
     {
         return $this->belongsToMany(User::class);
+    }
+
+    public function comments(): HasMany
+    {
+        return $this->hasMany(FestivalComment::class);
     }
 }
