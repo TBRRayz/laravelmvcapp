@@ -11,6 +11,15 @@ class FestivalController extends Controller
         $this->middleware('auth');
     }
 
+    public function show(Festival $festival)
+    {
+        $checksIns = (auth()->user()) ? auth()->user()->checkIn->contains($festival->id) : false;
+
+        return view('festival.show', [
+            'festival' => $festival,
+            'checksIns' => $checksIns,
+        ]);
+    }
 
     public function create()
     {
@@ -47,6 +56,40 @@ class FestivalController extends Controller
 
         //return redirect('/profile/' . auth()->user()->id);
         return redirect('/home');
+    }
+
+    public  function edit(Festival $festival) {
+
+        $this->authorize('update', [Festival::class, $festival]);
+
+        return view('festival.edit', [
+            'festival' => $festival,
+        ]);
+    }
+
+    public function update(Festival $festival) {
+
+        $this->authorize('update', [Festival::class, $festival]);
+        $data = request()->validate([
+            'festivalName' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'url' => 'url',
+            'festivalImage' => 'image',
+        ]);
+
+        $imagePath = request('festivalImage')->store('uploads', 'public');
+
+        $festival->update([
+            'festivalName' => $data['festivalName'],
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'url' => $data['url'],
+            'festivalImage' => $imagePath,
+        ]);
+
+        return redirect("/festival/{$festival->id}");
+
     }
 
     public function delete($festival)
