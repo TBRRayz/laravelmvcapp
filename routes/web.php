@@ -19,6 +19,7 @@ Route::get('/', function () {return view('welcome');
 Auth::routes();
 
 Route::post('/check/{festival}', [App\Http\Controllers\ChecksController::class, 'store']);
+Route::post('/status/{festival}', [App\Http\Controllers\FestivalController::class, 'statusUpdate']);
 
 Route::get('/festival/create', [App\Http\Controllers\FestivalController::class, 'create']);
 Route::post('/festival', [App\Http\Controllers\FestivalController::class, 'store']);

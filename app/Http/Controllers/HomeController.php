@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $festivalData = Festival::all()->sortByDesc('created_at');
+        $festivalData = Festival::where('status', '1')->get()->sortByDesc('created_at');
         return view('home', ['festivals'=>$festivalData]);
     }
 }
