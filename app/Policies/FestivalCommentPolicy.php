@@ -41,7 +41,7 @@ class FestivalCommentPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->checkIn->count() >= 5;
     }
 
     /**

@@ -50,9 +50,9 @@
                 </div>
             @endforeach
     </div>
-
     <div class="card mt-2">
         <div class="card-block">
+            @can('create', \App\Models\FestivalComment::class)
             <form method="post" action="/festival/{{ $festival->id }}/comments">
                 @csrf
                 <div class="form-group m-2">
@@ -65,7 +65,11 @@
                     <button type="submit" class="btn btn-primary">Comment</button>
                 </div>
             </form>
+            @else
+                <div>You can add a comment when you have 5 checkIns</div>
+            @endcan
         </div>
     </div>
+
 </div>
 @endsection
