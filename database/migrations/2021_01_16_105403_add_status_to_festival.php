@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFestivalimageAndFestivalnameToFestivalTabel extends Migration
+class AddStatusToFestival extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,7 @@ class AddFestivalimageAndFestivalnameToFestivalTabel extends Migration
     public function up()
     {
         Schema::table('festivals', function (Blueprint $table) {
-            $table->string('festivalName')->nullable()->after('id');
-            $table->string('festivalImage')->nullable()->after('description');
-
+            $table->boolean('status')->after('url');
         });
     }
 
@@ -28,8 +26,7 @@ class AddFestivalimageAndFestivalnameToFestivalTabel extends Migration
     public function down()
     {
         Schema::table('festivals', function (Blueprint $table) {
-            $table->dropColumn('festivalName');
-            $table->dropColumn('festivalImage');
+            $table->dropColumn('status');
         });
     }
 }

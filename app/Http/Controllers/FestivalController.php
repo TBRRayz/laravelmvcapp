@@ -51,6 +51,7 @@ class FestivalController extends Controller
             'description' => $data['description'],
             'genre' => $data['genre'],
             'url' => $data['url'],
+            'status' => true,
             'festivalImage' => $imagePath,
         ]);
 
