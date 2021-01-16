@@ -15,6 +15,8 @@ class CommentController extends Controller
     public function store(Festival $festival)
     {
         $userId = auth()->user()->getAuthIdentifier();
+        $this->authorize('create', FestivalComment::class);
+
 
         auth()->user()->comments()->create([
             'festival_id' => $festival->id,
