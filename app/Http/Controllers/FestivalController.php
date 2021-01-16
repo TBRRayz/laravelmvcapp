@@ -51,6 +51,7 @@ class FestivalController extends Controller
             'description' => $data['description'],
             'genre' => $data['genre'],
             'url' => $data['url'],
+            'status' => true,
             'festivalImage' => $imagePath,
         ]);
 
@@ -98,5 +99,16 @@ class FestivalController extends Controller
 
         Festival::find($festival)->delete();
         return redirect()->back();
+    }
+
+    public function statusUpdate(Festival $festival)
+    {
+        $this->authorize('update', [Festival::class, $festival]);
+        if($festival->status === '1'){
+            $festival->status = false;
+        }else {
+            $festival->status = true;
+        }
+        $festival->save();
     }
 }
