@@ -11,6 +11,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Title</th>
                 <th scope="col">Genre</th>
+                <th scope="col">Status</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -22,6 +23,7 @@
                 <td>{{ $festival->festivalName }}</td>
                 <td>{{ $festival->title }}</td>
                 <td>{{ $festival->genre }}</td>
+                <td><enable-button festival-id="{{ $festival->id }}" enable="{{ $festival->status }}"></enable-button></td>
                 <td><a href="/festival/{{$festival->id}}/edit" class="btn btn-primary">Edit</a></td>
                 <td>
                     <form action="/festival/delete/{{$festival->id}}" method="post">
