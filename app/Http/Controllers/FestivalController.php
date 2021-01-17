@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 class FestivalController extends Controller
 {
 
-    public function __construct(){
-        $this->middleware('auth');
-    }
-
     public function show(Festival $festival)
     {
         $checksIns = (auth()->user()) ? auth()->user()->checkIn->contains($festival->id) : false;

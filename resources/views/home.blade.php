@@ -32,8 +32,8 @@
             <div class="col-9 p-5">
                 <div><h1>{{ $festival->festivalName }}</h1></div>
                 <div class="d-flex">
-                    <div class="pr-5"><strong>13</strong> Likes</div>
-                    <div class="pr-5"><strong>124</strong> comments</div>
+                    <div class="pr-5"><strong>{{ $festival->checkIns->count() }}</strong> check-ins</div>
+                    <div class="pr-5"><strong>{{ $festival->comments->count() }}</strong> comments</div>
                 </div>
                 <div class="pt-4 font-weight-bold">{{ $festival->title }}</div>
             </div>

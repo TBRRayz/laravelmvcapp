@@ -65,7 +65,7 @@ class FestivalCommentPolicy
      */
     public function delete(User $user, FestivalComment $festivalComment)
     {
-        return $user->id == $festivalComment->user_id;
+        return $user->id == $festivalComment->user_id || $user->admin();
     }
 
     /**
