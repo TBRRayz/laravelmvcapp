@@ -8,9 +8,12 @@
         </div>
         <div class="col-9 p-5">
             <div><h1>{{ $user->username }}</h1></div>
-            <div class="d-flex">
+            @can('update', [\App\Models\UserProfile::class, $user->userProfile])
+            <div><a href="/user/{{$user->id}}/edit" class="btn btn-primary">Edit</a></div>
+            @endcan
+            <div class="d-flex pt-2">
                 <div class="pr-5"><strong>{{ $user->checkIn->count() }}</strong> check-ins</div>
-                <div class="pr-5"><strong>124</strong> comments</div>
+                <div class="pr-5"><strong>{{ $user->comments->count() }}</strong> comments</div>
             </div>
             <div class="pt-4 font-weight-bold"> {{ $user->userProfile->title }}</div>
             <div>{{ $user->userProfile->description }}</div>
