@@ -18,7 +18,7 @@ class FestivalPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return $user = \Auth::user();
     }
 
     /**

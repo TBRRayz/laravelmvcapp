@@ -8,16 +8,18 @@
         </div>
         <div class="col-6 p-5">
             <div><h1>{{ $festival->festivalName }}</h1></div>
-            <check-button festival-id="{{ $festival->id }}" check-ins="{{ $checksIns }}"></check-button>
+            @can('viewAny', \App\Models\Festival::class)
+                <check-button festival-id="{{ $festival->id }}" check-ins="{{ $checksIns }}"></check-button>
+            @endcan
 
             <div class="pt-4 font-weight-bold">{{ $festival->title }}</div>
             <div class="d-flex">
                 <div class="pr-5"><strong>{{ $festival->checkIns->count() }}</strong> check-ins</div>
-                <div class="pr-5"><strong>124</strong> comments</div>
+                <div class="pr-5"><strong>{{ $festival->comments->count() }}</strong> comments</div>
             </div>
             <div class="pt-2">Genre: {{ $festival->genre }}</div>
             <div class="pt-2">{{ $festival->description }}</div>
-            <div class="pt-2">{{ $festival->url }}</div>
+            <div class="pt-2"><a href="{{ $festival->url }}">{{ $festival->url }}</a></div>
         </div>
     </div>
     <hr>
@@ -36,10 +38,10 @@
                             {{ $comment->created_at->diffForHumans() }}
                             </div>
                             @can('delete', [\App\Models\FestivalComment::class, $comment])
-                            <form class="float-right pt-4 pr-2" action="/comment/delete/{{$comment->id}}" method="post">
+                            <form class="float-right pt-4" action="/comment/delete/{{$comment->id}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger float-right ml-3 mr-1">Delete</button>
                             </form>
                             @endcan
                         </div>
@@ -50,6 +52,7 @@
                 </div>
             @endforeach
     </div>
+    @can('viewAny', \App\Models\Festival::class)
     <div class="card mt-2">
         <div class="card-block">
             @can('create', \App\Models\FestivalComment::class)
@@ -69,6 +72,7 @@
                 <div>You can add a comment when you have 5 checkIns</div>
             @endcan
         </div>
+        @endcan
     </div>
 
 </div>

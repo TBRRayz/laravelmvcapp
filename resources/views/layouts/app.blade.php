@@ -39,9 +39,20 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        @can('create', \App\Models\Festival::class)
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Edit Profile</a>
+                            <a class="nav-link" href="/admin/festival">Festivals</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/user">Users</a>
+                        </li>
+                        @endcan
+                        @guest
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/{{Auth::user()->id}}">Profile</a>
+                        </li>
+                            @endguest
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
