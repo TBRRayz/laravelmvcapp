@@ -47,7 +47,7 @@ class FestivalController extends Controller
             'description' => $data['description'],
             'genre' => $data['genre'],
             'url' => $data['url'],
-            'status' => true,
+            'status' => false,
             'festivalImage' => $imagePath,
         ]);
 
@@ -75,7 +75,12 @@ class FestivalController extends Controller
             'festivalImage' => 'image',
         ]);
 
-        $imagePath = request('festivalImage')->store('uploads', 'public');
+        if ('festivalImage' > 2) {
+            $imagePath = request('festivalImage')->store('uploads', 'public');
+        }
+        else {
+            $imagePath = $festival->festivalImage;
+        }
 
         $festival->update([
             'festivalName' => $data['festivalName'],

@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdac750d-87a9-4c6f-952f-ac6ce802c4df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FestivalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FestivalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/FestivalCommentPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/FestivalCommentPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/FestivalPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/FestivalPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/festival/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/festival/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +210,7 @@
       <workItem from="1609249529120" duration="17488000" />
       <workItem from="1609618621085" duration="6317000" />
       <workItem from="1609948601766" duration="31874000" />
+      <workItem from="1610900815722" duration="1618000" />
     </task>
     <servers />
   </component>
