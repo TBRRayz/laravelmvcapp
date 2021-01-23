@@ -30,8 +30,9 @@
                         <div class="col-1">
                             <img src="{{ $comment->user->userProfile->userProfileImage() }}" class="rounded-circle" :width="[80]">
                         </div>
-                        <div class="col-9 pl-4 pt-4">
-                            {{ $comment->content }}
+                        <div class="col-9 pl-4">
+                            <div><a href="/user/{{$comment->user->id}}">{{$comment->user->username}}</a></div>
+                            <div pt-4>{{ $comment->content }}</div>
                         </div>
                         <div class="col-2">
                             <div class="float-right pr-2">
