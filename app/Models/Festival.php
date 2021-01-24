@@ -17,6 +17,7 @@ class Festival extends Model
         'genre',
         'url',
         'festivalImage',
+        'status',
     ];
 
     public function festivalProfile(): HasOne
