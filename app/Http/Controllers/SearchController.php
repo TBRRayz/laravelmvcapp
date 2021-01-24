@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function search() {
-        $searchText = $_GET['searchInput'];
-        $searchGenre = $_GET['genre'];
+    public function search(Request $request) {
+        $searchText = $request['searchInput'];
+        $searchGenre = $request['genre'];
         if ($searchGenre == 'All' && $searchText != '') {
             $festivals = Festival::where('status', '1')->where('festivalName', 'LIKE', '%' . $searchText . '%')
                 ->orWhere('title', 'LIKE', '%' . $searchText . '%')
