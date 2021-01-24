@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-3 p-5">
                 <a href="/festival/{{$festival->id}}">
-                    <img src="/storage/app/public/{{ $festival->festivalImage }}" class="rounded-circle w-100">
+                    <img src="/storage/{{ $festival->festivalImage }}" class="rounded-circle w-100">
                 </a>
             </div>
             <div class="col-9 p-5">
