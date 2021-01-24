@@ -96,7 +96,7 @@ class FestivalController extends Controller
 
     public function delete($festival)
     {
-        $this->authorize('delete', Festival::class);
+        $this->authorize('create', Festival::class);
 
         Festival::find($festival)->delete();
         return redirect()->back();
