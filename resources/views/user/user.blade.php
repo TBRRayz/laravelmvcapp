@@ -25,7 +25,7 @@
         <div class="col-3 p-5">
             <div><h4>{{ $festival->festivalName }}</h4></div>
             <div><h6>{{ $festival->title }}</h6></div>
-            <img src="/storage/app/public/{{ $festival->festivalImage }}" class="rounded-circle w-100">
+            <img src="/storage/{{ $festival->festivalImage }}" class="rounded-circle w-100">
         </div>
         @endforeach
 

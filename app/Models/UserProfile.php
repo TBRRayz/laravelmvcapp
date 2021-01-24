@@ -18,7 +18,7 @@ class UserProfile extends Model
 
     public function userProfileImage()
     {
-        $imagePath = ($this->image) ? '/storage/app/public/' . $this->image : '/storage/userProfile/CuPx630800AFBoBxWyFyWHHPAAIBw3T54kH49Ciz.png';
+        $imagePath = ($this->image) ? '/storage/' . $this->image : '/storage/userProfile/CuPx630800AFBoBxWyFyWHHPAAIBw3T54kH49Ciz.png';
         return $imagePath;
     }
 
