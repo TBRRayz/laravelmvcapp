@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6 p-5">
-            <img src="/storage/app/public{{ $festival->festivalImage }}" class="w-100">
+            <img src="/storage/app/public/{{ $festival->festivalImage }}" class="w-100">
         </div>
         <div class="col-6 p-5">
             <div><h1>{{ $festival->festivalName }}</h1></div>
